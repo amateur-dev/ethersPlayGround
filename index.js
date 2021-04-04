@@ -13,11 +13,11 @@ let wallet = new ethers.Wallet(
   PRIVATE_KEY,
   alchemy_provider)
 
-// let provider = new HDWalletProvider("0x9897f9775d3c390e84e23c5a5772ed22154b7fe70f0b27b2eb6e611135837055","https://eth-kovan.alchemyapi.io/v2/SCqSIOatIK13AdOAUM470RdHyyf-FkHk")
+// let provider = new HDWalletProvider(PRIVATE_KEY,"https://eth-kovan.alchemyapi.io/v2/"+ALCHEMY_API_KEY)
 
 // const web3 = new Web3(provider);
 
-// var web3 = new Web3(new Web3.providers.HttpProvider('https://eth-kovan.alchemyapi.io/v2/SCqSIOatIK13AdOAUM470RdHyyf-FkHk'));
+// var web3 = new Web3(new Web3.providers.HttpProvider('https://eth-kovan.alchemyapi.io/v2/'+ALCHEMY_API_KEY));
 
 // web3.eth.getBalance("0x4337a3876c1a021762F8eDf16524ad09eF9F5166")
 // .then(console.log);
