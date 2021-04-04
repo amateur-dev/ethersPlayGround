@@ -19,17 +19,7 @@ let wallet = new ethers.Wallet(
 
 // var web3 = new Web3(new Web3.providers.HttpProvider('https://eth-kovan.alchemyapi.io/v2/'+ALCHEMY_API_KEY));
 
-// web3.eth.getBalance("0x4337a3876c1a021762F8eDf16524ad09eF9F5166")
-// .then(console.log);
-// let account = null;
 
-// let accounts = async () => {
-//   let x = await web3.eth.getAccounts();
-//   console.log(`the accounts are ${x}`);
-//   account = x;
-// }
-
-// provider.engine.stop();
 
 
 
@@ -62,7 +52,7 @@ const signTx = async () => {
             
           };
   // nonce: walletNonce,
-  //           chainId: alchemy_provider.network.chainId
+  // chainId: alchemy_provider.network.chainId
   const populatedTransaction = await wallet.populateTransaction(tx);
   console.log("POPULATED TX",populatedTransaction); // this has all the details required to broadcast the tx to the network through the provider
   signedTx = await wallet.signTransaction(populatedTransaction); // signing the valid transaction object
@@ -84,37 +74,4 @@ const signTx = async () => {
 }
 
 signTx();
-// console.log(signedTx);
-    
-
-    // "0x2e1fe98e926f10eeca5dd6d690fa5b24c026c46287c3f1a729ca2c596f3a772e4bd2d5fde3b848d58b45f958276b63ff54846fc9329dc68e9822c7fb699e9adf1c"
-
-    // Note: no need for your await
-    // 
-    // console.log("UNSIGNED", serializedTransaction);
-    // "0xea808477359400825208943e245df5a4de41e65cecd1f98b96ca06c3d319f087470de4df82000080038080"
-
-    // Note: no need for your await
-    // const signedSerialized = ethers.utils.serializeTransaction(tx, signature);
-    // console.log("SIGNED", signedSerialized);
-    // "0xf86a808477359400825208943e245df5a4de41e65cecd1f98b96ca06c3d319f087470de4df820000802aa02e1fe98e926f10eeca5dd6d690fa5b24c026c46287c3f1a729ca2c596f3a772ea04bd2d5fde3b848d58b45f958276b63ff54846fc9329dc68e9822c7fb699e9adf"
-
-    // The decoded transaction
-    // console.log("DECODED", ethers.utils.parseTransaction(signedSerialized));
-    // { nonce: 0,
-    //   gasPrice: BigNumber { _hex: '0x77359400', _isBigNumber: true },
-    //   gasLimit: BigNumber { _hex: '0x5208', _isBigNumber: true },
-    //   to: '0x3e245dF5a4dE41E65cecD1f98B96Ca06C3D319F0',
-    //   value: BigNumber { _hex: '0x470de4df820000', _isBigNumber: true },
-    //   data: '0x',
-    //   chainId: 3,
-    //   v: 42,
-    //   r: '0x2e1fe98e926f10eeca5dd6d690fa5b24c026c46287c3f1a729ca2c596f3a772e',
-    //   s: '0x4bd2d5fde3b848d58b45f958276b63ff54846fc9329dc68e9822c7fb699e9adf',
-    //   from: '0x796C7619429805a2951f3eB9dAb6E87Ba6d8622b',
-    //   hash:
-    //    '0x844dbdc24fb59480bba8597e588302fc1430ed9f7944b4d9c0c2908dabb75c2f' }
-
-    // Note: The addresses match :)
-
 
