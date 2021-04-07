@@ -1,5 +1,9 @@
 const { ethers } = require("ethers");
-const Web3 = require('web3');
+var abi = require('./artifacts/transferFunction').abi;
+var bytecode = require('./artifacts/transferFunction').byteCode;
+
+
+// const Web3 = require('web3');
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const ALCHEMY_API_KEY = process.env['ALCHEMY_API_KEY']
 const PRIVATE_KEY = process.env['PRIVATE_KEY']
@@ -73,5 +77,12 @@ const signTx = async () => {
   // console.log(myJSON1 == myJSON2)
 }
 
-signTx();
+// signTx();
 
+
+let contractInterface = new ethers.utils.Interface(abi);
+let contract1 = new ethers.ContractFactory(contractInterface,bytecode);
+// console.log(contract1);
+let contractTxPopulated = contract1.interface.encodeFunctionData("transfer", [ "0x1234567890123456789012345678901234567890", ethers.utils.parseEther("1.0") ])
+// .functions.transfer.encode(wallet.address, ethers.utils.parseEther("1.0"))
+console.log(contractTxPopulated);
