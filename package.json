@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.2.6",
-    "ethers": "^5.0.32",
-    "web3": "^1.3.4"
+    "ethers": "^5.0.32"
   },
   "devDependencies": {},
   "scripts": {
