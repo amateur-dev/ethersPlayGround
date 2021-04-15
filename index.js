@@ -16,7 +16,14 @@ const wallet = new ethers.Wallet(
   PRIVATE_KEY,
   alchemy_provider)
 
-deployTransactionData(wallet, abi, bytecode).then(response => {console.log(response)});
+// const isAddress = (address) => {
+//   return ethers.utils.isAddress(address);  
+// }
+
+// console.log(isAddress("0x4ed8243edc4082bdce7ba01ca2aa32cfbd42fcc4"));
+  
+
+// deployTransactionData(wallet, abi, bytecode).then(response => {console.log(response)});
 
 
 // // console.log(alchemy_provider.network.chainId);
