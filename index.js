@@ -1,10 +1,9 @@
 const { ethers } = require("ethers");
 var abi = require('./artifacts/transferFunction').abi;
 var bytecode = require('./artifacts/transferFunction').byteCode;
+require('dotenv').config();
 
 
-// const Web3 = require('web3');
-const HDWalletProvider = require("@truffle/hdwallet-provider");
 const ALCHEMY_API_KEY = process.env['ALCHEMY_API_KEY']
 const PRIVATE_KEY = process.env['PRIVATE_KEY']
 
