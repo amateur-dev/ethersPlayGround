@@ -17,27 +17,8 @@ const wallet = new ethers.Wallet(
   PRIVATE_KEY,
   alchemy_provider)
 
-// const isAddress = (address) => {
-//   return ethers.utils.isAddress(address);  
-// }
-
-// console.log(isAddress("0x4ed8243edc4082bdce7ba01ca2aa32cfbd42fcc4"));
   
-
 // deployTransactionData(wallet, abi, bytecode).then(response => {console.log(response)});
-
-
-// // console.log(alchemy_provider.network.chainId);
-
-
-// // let provider = new HDWalletProvider(PRIVATE_KEY,"https://eth-kovan.alchemyapi.io/v2/"+ALCHEMY_API_KEY)
-
-// // const web3 = new Web3(provider);
-
-// // var web3 = new Web3(new Web3.providers.HttpProvider('https://eth-kovan.alchemyapi.io/v2/'+ALCHEMY_API_KEY));
-
-
-
 
 
 // // const fx = async() => {
