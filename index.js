@@ -18,8 +18,8 @@ const wallet = new ethers.Wallet(
   alchemy_provider)
 
   
-// deployTransactionData(wallet, abi, bytecode).then(response => {console.log(response)});
-
+deployTransactionData(wallet, abi, bytecode).then(response => {console.log(response)});
+console.log(deployTransactionData)
 
 // // const fx = async() => {
   
