@@ -1,3 +1,4 @@
+// working from coder
 const { ethers } = require("ethers");
 var abi = require('./artifacts/transferFunction').abi;
 var bytecode = require('./artifacts/transferFunction').byteCode;
